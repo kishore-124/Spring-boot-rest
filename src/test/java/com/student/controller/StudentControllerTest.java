@@ -34,7 +34,7 @@ public class StudentControllerTest {
         student.setLastName("test");
         student.setNationality("test");
 
-        when(studentService.saveStudent(student));
+        //when(studentService.saveStudent(student));
         this.mockMvc.perform(post("/api/v1/students")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("Student created successfully")));
     }
